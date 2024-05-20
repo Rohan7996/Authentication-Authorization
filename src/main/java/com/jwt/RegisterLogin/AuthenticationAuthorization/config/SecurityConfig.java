@@ -30,13 +30,5 @@ public class SecurityConfig {
                 .sessionManagement(session->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         http.addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
-//                .authorizeRequests().
-//                requestMatchers("/test").authenticated().requestMatchers("/auth/login").permitAll()
-//                .anyRequest()
-//                .authenticated()
-//                .and().exceptionHandling(ex -> ex.authenticationEntryPoint(point))
-//                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-//        http.addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class);
-//        return http.build();
     }
 }
